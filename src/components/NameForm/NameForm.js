@@ -1,4 +1,4 @@
-import { Formik, Field, Form, ErrorMessage } from 'formik';
+import { Formik, ErrorMessage } from 'formik';
 import { Component } from 'react';
 import * as Yup from 'yup';
 import { StyledForm, AddBtn, StyledField } from './NameForm.styled';
