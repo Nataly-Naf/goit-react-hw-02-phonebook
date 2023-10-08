@@ -20,8 +20,9 @@ export class NameForm extends Component {
     this.setState({ [name]: value.trim() });
   };
 
-  handleSubmit = values => {
+  handleSubmit = (values, actions) => {
     this.props.onSubmit(values);
+    actions.resetForm();
   };
 
   render() {
@@ -30,6 +31,7 @@ export class NameForm extends Component {
         initialValues={{ name: '', number: '' }}
         validationSchema={formSquema}
         onSubmit={this.handleSubmit}
+        
       >
         <StyledForm>
           <label>

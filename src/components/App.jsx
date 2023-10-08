@@ -15,7 +15,7 @@ export class App extends Component {
     filter: '',
   };
 
-  ChangeFilter = newFilter => {
+  changeFilter = newFilter => {
     this.setState({ filter: newFilter });
   };
 
@@ -56,7 +56,7 @@ export class App extends Component {
         <NameForm onSubmit={this.addName} />
         <FilterForm
           filter={this.state.filter}
-          onChangeFilter={this.ChangeFilter}
+          onChangeFilter={this.changeFilter}
         />
         <ContactsList contacts={visibleNames} onDelete={this.deleteContact} />
       </div>
